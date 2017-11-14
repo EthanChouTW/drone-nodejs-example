@@ -1,4 +1,8 @@
 pipeline:
+  workspace: 
+    base: /node
+    path: drone/node-example
+
   install:
     image: node:8.6.0
     commands:
