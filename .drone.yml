@@ -1,7 +1,7 @@
 pipeline:
-  workspace: 
-    base: /node
-    path: drone/node-example
+  # workspace: 
+  #   base: /node
+  #   path: drone-nodejs-example
 
   install:
     image: node:8.6.0
@@ -17,6 +17,8 @@ pipeline:
     group: testing
     commands:
       - yarn run test
+    environment: 
+      - PORT=9000
 
   lint:
     image: node:8.6.0
